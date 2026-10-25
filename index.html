@@ -1,1 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Aura Preview</title>
+    <style>
+      :root {
+        --bg: #07131f;
+        --panel: #0d1f2d;
+        --primary: #ffb703;
+        --text: #edf6ff;
+        --muted: #a9bfd3;
+        --border: rgba(255,255,255,0.08);
+      }
 
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #081722 0%, #0f2234 100%);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px;
+      }
+
+      .container {
+        width: min(1100px, 100%);
+        background: rgba(13, 31, 45, 0.88);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+        overflow: hidden;
+      }
+
+      .topbar {
+        background: rgba(255, 183, 3, 0.09);
+        border-bottom: 1px solid var(--border);
+        padding: 18px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .live-link {
+        display: inline-block;
+        background: var(--primary);
+        color: #07131f;
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+
+      .content {
+        padding: 26px 24px 30px;
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 3vw, 3rem);
+      }
+
+      .subtitle {
+        margin: 0 0 24px;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .video-card {
+        border: 1px solid var(--border);
+        background: rgba(255,255,255,0.02);
+        border-radius: 16px;
+        overflow: hidden;
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        max-height: 640px;
+        background: #000;
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding-top: 16px;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">News Aura</div>
+        <a class="live-link" href="https://news-aura.dktheme.com" target="_blank" rel="noreferrer">Open Live Preview</a>
+      </div>
+
+      <div class="content">
+        <h1>Theme Demo Preview</h1>
+        <p class="subtitle">This preview page shows the News Aura demo video and is linked to the live site: <strong>news-aura.dktheme.com</strong></p>
+
+        <div class="video-card">
+          <video controls preload="metadata" playsinline poster="">
+            <source src="/m4HWoYKF7SOqUopVwRe-J8AO8pBNBcbuLnCNzhynm6k.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="meta">
+          <span>Demo file: /m4HWoYKF7SOqUopVwRe-J8AO8pBNBcbuLnCNzhynm6k.mp4</span>
+          <span>Preview URL: news-aura.dktheme.com</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
